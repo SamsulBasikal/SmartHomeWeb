@@ -15,6 +15,8 @@ if not firebase_admin._apps:
     try:
         if "firebase" in st.secrets:
             fb_dict = dict(st.secrets["firebase"])
+            fb_dict["private_key"] = fb_dict["private_key"].replace("\\n", "\n")
+            
             cred = credentials.Certificate(fb_dict)
         else:
             cred = credentials.Certificate('kunci-firebase.json')
