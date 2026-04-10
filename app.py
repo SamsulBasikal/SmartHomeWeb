@@ -45,8 +45,7 @@ st.markdown("""
 
 # Header
 st.title("Kelompok 10 Smart Home")
-st.write(f"**Admin Dashboard** - Amikom Purwokerto")
-st.caption(f"Server Time: {datetime.now().strftime('%H:%M:%S')}")
+st.write(f"Admin")
 
 data = ref.get()
 if not data:
